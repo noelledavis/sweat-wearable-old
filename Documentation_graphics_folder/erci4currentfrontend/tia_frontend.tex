@@ -1,0 +1,83 @@
+\documentclass[tikz, border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+
+\makeatletter
+\def\pgf@circ@vsourceaminv@path#1{\pgf@circ@bipole@path{vsourceAMinv}{#1}}
+\tikzset{american voltage source inv/.style = {\circuitikzbasekey, /tikz/to path=\pgf@circ@vsourceaminv@path, \circuitikzbasekey/bipole/is voltage=true, v=#1}}
+\pgfcircdeclarebipole{}{\ctikzvalof{bipoles/vsourceam/height}}{vsourceAMinv}{\ctikzvalof{bipoles/vsourceam/height}}{\ctikzvalof{bipoles/vsourceam/width}}{
+
+    \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+
+    \pgfpathellipse{\pgfpointorigin}{\pgfpoint{0}{\pgf@circ@res@up}}{\pgfpoint{\pgf@circ@res@left}{0}}
+
+
+    \pgftext[bottom,rotate=90,y=\ctikzvalof{bipoles/vsourceam/margin}\pgf@circ@res@down]{$-$}
+    \pgftext[top,rotate=90,y=\ctikzvalof{bipoles/vsourceam/margin}\pgf@circ@res@up]{$+$}
+
+    \pgfusepath{draw}
+}
+\makeatother
+
+\begin{document}
+
+\tikzstyle{block} = [draw, rectangle, 
+    minimum height=3em, minimum width=6em]
+\tikzstyle{block2} = [draw, rectangle]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+\begin{circuitikz}[american voltages, american resistors, baseline=(current bounding box.center), scale=1.0, transform shape]
+    \ctikzset{bipoles/resistor/height=0.15}
+    \ctikzset{bipoles/resistor/width=0.4}
+\draw (-1,0) node[op amp] (opamp0) {}
+
+    (opamp0.-) to[short, -*] ++(-0.5, 0) node[] (tiaopampin) {} to[short] ++(0, 1.5) node[] {}
+         to[R, l_=1M] ++(2.8, 0) node [] {} -| (opamp0.out)
+
+    (tiaopampin) 
+        to[short] ++(-1, 0) node[left] {$\mathrm{I}_{\textrm{sensor}}$}
+
+    (opamp0.+) to[short, -*] ++(-0.5, 0) node[] (tiarefpin) {} to[short] ++(0, -1.5) node[below] {$\frac{\mathrm{V}_{\mathrm{DD}}}{2}$}
+    (tiarefpin) to[short] ++(-1, 0) node[left] {REF}
+
+    (-1, -4) node[] (tialabel) {\large\textbf{Transimpedance amplifier}}
+
+
+    (8,0) node[op amp] (opamp1) {}
+    (opamp0.out) to[R=820k, *-*] ++(2,0) node[] (fb1) {}
+    to[R=820k, -*] ++(2,0) node[] (p1) {}
+    -| (opamp1.+)
+    (p1) to[C=0.1$\mu$F] ++(0,-2) node[ground] {}
+    (opamp1.out) to[short] ++(0,2)
+    to[short, -*] ++(-3,0) node[] (fb2) {}
+    |- (opamp1.-)
+    (fb2) to[C=0.2$\mu$F] ++(-1.5,0) -| (fb1)
+
+
+    (16,0) node[op amp] (opamp2) {}
+    (opamp1.out) to[R=820k, *-*] ++(2,0) node[] (fb3) {}
+    to[R=820k] ++(2,0) node[] (p2) {}
+    -| (opamp2.+)
+    (p2) to[C=0.1$\mu$F, *-] ++(0,-2) node[ground] {}
+    (opamp2.out) to[short] ++(0,2)
+    to[short, -*] ++(-3,0) node[] (fb4) {}
+    |- (opamp2.-)
+    (fb4) to[C=0.2$\mu$F] ++(-1.5,0) node[] (weasel1) {} -| (fb3)
+    (fb3) to[short] ++(0,1)
+    (fb1) to[short] ++(0,1)
+    (opamp2.out) to[short, -*] ++(1,0) node[right] (finalout) {to ADC}
+
+
+    (10, -4) node[] (filterlabel) {\large\textbf{Fourth order low-pass filter}}
+    ;
+\end{circuitikz}
+\end{document}
+

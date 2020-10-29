@@ -1,0 +1,93 @@
+Partlist
+
+Exported from untitled.brd at 2/16/16 12:37 PM
+
+EAGLE Version 7.2.0 Copyright (c) 1988-2014 CadSoft
+
+Assembly variant: 
+
+Part     Value               Package           Library                             Position (inch)       Orientation
+
+C1       2.2uF               C0402             resistor                            (1.13 0.165)          R90
+C2       4.7uF               C0603             resistor                            (1.008 0.37)          R270
+C3       0.1u                C0201             resistor                            (0.757 0.889)         R270
+C4       0.1u                C0201             resistor                            (0.192 1.13)          R180
+C5       0.1u                C0201             resistor                            (1.168 0.946)         R0
+C6       0.1u                C0201             resistor                            (1.089 0.91)          R180
+C7       0.1u                C0201             resistor                            (1.089 0.947)         R180
+C8       10u                 C0402             resistor                            (1.294 0.949)         R0
+C9       0.1u                C0201             resistor                            (1.3 0.905)           R0
+C10      0.1u                C0201             resistor                            (0.99 0.95)           R0
+C11      0.1u                C0201             resistor                            (0.807 0.965)         R90
+C12      0.1u                C0201             resistor                            (0.772 0.965)         R90
+C13      10u                 C0402             resistor                            (0.176 1.177)         R180
+C14      TBA                 C0402             resistor                            (0.69 0.518)          R270
+C15      0.1u                C0201             resistor                            (1.158 1.079)         R0
+C16      0.1u                C0201             resistor                            (1.161 1.128)         R180
+C17      0.1u                C0201             resistor                            (1.161 1.163)         R180
+C18      0.1u                C0201             resistor                            (0.999 1.186)         R0
+C19      0.1u                C0201             resistor                            (0.772 1.113)         R270
+C20      0.1u                C0201             resistor                            (0.812 1.114)         R270
+C21      TBA                 C0402             resistor                            (1.132 0.602)         R90
+C23      10uF                C0402             adafruit                            (0.804 0.875)         R270
+C24      1u                  C0402             adafruit                            (1.521 0.707)         R270
+C25      20pF                C0402             adafruit                            (0.124 0.888)         R180
+C26      20pF                C0402             adafruit                            (0.16 1.083)          R180
+C27      10u                 C0402             resistor                            (0.57 0.41)           R180
+C28      0.1uF               C0201             resistor                            (0.686 0.633)         R0
+C29      10u                 C0402             resistor                            (1.113 0.722)         R90
+C30      0.1u                C0201             resistor                            (1.037 0.695)         R90
+C32      0.1uF               C0201             resistor                            (0.719 0.889)         R270
+C33      100n                C0201             resistor                            (0.699 0.812)         R90
+C34      100n                C0201             resistor                            (0.729 0.813)         R90
+C36      10uF                C0402             adafruit                            (1.266 0.792)         R0
+C68      1uF                 C0402             adafruit                            (1.453 0.233)         R90
+C74      10uF                C0402             adafruit                            (1.255 0.378)         R180
+C76      0.1uF               C0402             adafruit                            (1.255 0.319)         R180
+C79      1uF                 C0402             adafruit                            (1.254 0.441)         R0
+C80      1uF                 C0402             adafruit                            (1.381 0.318)         R0
+CF       1.5nf               C0402             resistor                            (0.884 0.16)          R0
+CN1                          JST-PH-2-SMT      adafruit                            (1.426 1.149)         R0
+D1       MBR0540LT           SOD123            eric-custom                         (1.119 0.356)         R270
+IC2      662k reg            SOT23             linear                              (1.402 0.419)         R270
+J3       J-06-100-2X03       HDR-100-2X03      con-headers-jp                      (0.49 0.98)           R180
+L2       10uH                0805              SparkFun-Passives                   (1.317 0.144)         R180
+L3       10uH                0805              SparkFun-Passives                   (1.19 0.174)          R90
+Q1       MMBF5457            SOT23             eric-custom                         (0.128 0.129)         R90
+Q3       16M Crystal         NX3225            adafruit                            (0.142 0.987)         R180
+R1       2.2k                R0201             resistor                            (0.599 0.122)         R270
+R2       2.2k                R0201             resistor                            (0.599 0.201)         R90
+R3       376k                R0402             resistor                            (0.884 0.236)         R0
+R4       13.3k               R0402             resistor                            (0.881 0.09)          R0
+R8       1M                  R0402             resistor                            (0.743 0.518)         R270
+R9       1M                  R0402             resistor                            (1.073 0.601)         R90
+R10      820k                R0201             resistor                            (0.99 0.916)          R180
+R11      820k                R0201             resistor                            (0.941 0.95)          R0
+R13      820k                R0201             resistor                            (1.15 0.875)          R180
+R14      820k                R0201             resistor                            (1.148 0.91)          R0
+R20      820k                R0201             resistor                            (1.211 1.162)         R180
+R21      820k                R0201             resistor                            (1.211 1.128)         R0
+R23      820k                R0201             resistor                            (1 1.214)             R180
+R24      820k                R0201             resistor                            (0.95 1.195)          R270
+R26      40                  R0201             resistor                            (0.384 0.256)         R0
+R27      750                 R0402             resistor                            (0.107 0.23)          R0
+R43      1M                  R0201             resistor                            (0.759 0.813)         R270
+R44      20k                 R0201             resistor                            (0.687 0.769)         R180
+R45      20k                 R0201             resistor                            (0.748 0.769)         R180
+R53      100k                R0201             resistor                            (0.507 1.209)         R180
+R65      100K                R0201             resistor                            (1.515 0.879)         R0
+R70      100K                R0201             resistor                            (1.516 0.82)          R0
+T1       BC846               SOT23             transistor                          (0.699 0.157)         R270
+U$1      ADG5401             MSOP08            eric-custom                         (0.355 0.37)          R270
+U$2      AD8462              MSOP08            eric-custom                         (0.91 0.614)          R270
+U$5      LT1800              SOT23-5           eric-custom                         (0.915 0.828)         R270
+U1       AD8276ARZMSOP       MSOP08            eric-custom                         (0.771 0.342)         R270
+U2       Value               DBV0005A_N        eric-custom                         (1.01 0.187)          R270
+U3       LT6005IGNPBF        SOP63P600X175-16N LTC_By_element14_Batch_1            (0.982 1.067)         R180
+U4       INA282              SO08              eric-custom                         (0.373 0.138)         R270
+U5       ATMEGA328P_TQFP     TQFP32-08         SparkFun-DigitalIC                  (0.489 0.977)         R0
+U6       ADG711BRUZ          SOP65P640X120-16N Analog Devices_By_element14_Batch_1 (0.497 0.584)         R0
+U12      LTC3525ESC6-5TRMPBF SOT65P210X100-6N  LTC_By_element14_Batch_1            (1.321 0.232)         R180
+U13      HC_05               BLUETOOTH_SMD     Bluetooth HC-05                     (1.851 0.729)         R0
+U15      TLE2426IDR          R_8               eric-custom                         (1.335 0.657)         R0
+U20      FH12-5S-1SH         FH12-5S-1SH       eric-custom                         (0.158 0.616)         R90

@@ -1,0 +1,27 @@
+pin 23 (ADC0) - Cl sensor reading
+pin 24 (ADC1) - Na sensor reading
+pin 25 (ADC2) - shunt current voltage
+pin 1 - (PD3) - high side switch (36V) for iontophoresis
+pin 30, pin 31 (RXD, TXD) - serial for bluetooth
+pin 9 (PD5) - A4 enable, sensing channel 1 enable
+pin 10 (PD6) - A3 enable, sensing channel 2 enable
+pin 11 (PD7)  - A2 enable, sensing common electrode enable
+pin 12 (PB0) - A1 enable, iontophoresis low side enable
+pin 13 (PB1) - switching regulator enable pin
+pin 14 (PB2) - iontophoresis PWM pin
+
+
+// These are the pins used to shut down the switching regulator
+//  and for PWM, respectively
+#define IONTOPHORESIS_SHDN PB1
+#define IONTOPHORESIS_PWM PB2
+#define CH1_SENSE_SWITCH PD6
+#define SENSE_COMMON_MODE_SWITCH PD7
+#define CH2_SENSE_SWITCH PD5
+#define IONTOPHORESIS_HIGH_SIDE_SWITCH PD3
+
+
+// These are the pins for the ADC inputs
+#define CH1_ADC_PIN A0
+#define CH2_ADC_PIN A1
+#define CURRENT_SENSE_ADC_PIN A2
